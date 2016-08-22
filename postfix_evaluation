@@ -1,0 +1,77 @@
+//Evaluation of postfix expression.
+package training1;
+
+
+	import java.io.*;
+
+	import java.util.*;
+
+;	public class prime {
+	
+	
+	public static char[] readInput()
+	{
+		String postfixExpression=""; 
+		
+	Scanner scan=new Scanner(System.in);
+	postfixExpression=scan.nextLine();
+	return(postfixExpression.toCharArray());
+	}
+	
+	
+	public static Boolean isOperand(char element)
+	{
+		if(element>='0'&& element<='9')
+			return true;
+		else
+			return false;
+	}
+	
+	
+	public static void performOperation(Stack operandStack,char left,char right,char operator)
+	{
+		switch(operator)
+		{
+		case '+':operandStack.push((char)('0'+Character.getNumericValue(left)+Character.getNumericValue(right)));
+		break;
+		case '-':operandStack.push((char)('0'+Character.getNumericValue(left)-Character.getNumericValue(right)));
+		break;
+		case '*':operandStack.push((char)('0'+Character.getNumericValue(left)*Character.getNumericValue(right)));
+		break;
+	
+		case '/':operandStack.push((char)('0'+Character.getNumericValue(left)/Character.getNumericValue(right)));
+		break;
+		}
+	}
+	
+	
+	
+	    public static void main(String[] args) {
+	    	char left,right;
+	    	Character result;
+	    	Stack<Character> operandStack=new Stack<>();
+	    	char[] postfixExpression;
+	    	postfixExpression=readInput();
+	    for(char element: postfixExpression)
+	    {
+	    	if(isOperand(element))
+	    	{
+	    		operandStack.push(element);
+	    	}
+	    	else
+	    	{
+	    		right=operandStack.pop();
+	    		left=operandStack.pop();
+	    		performOperation(operandStack,left,right,element);
+	    		
+	    	}
+	    }
+	    
+	    System.out.println(Character.getNumericValue(operandStack.pop()));	    	
+	    }
+	}
+
+		
+			
+	
+
