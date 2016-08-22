@@ -1,0 +1,40 @@
+Non generic
+package training1;
+
+generic functions-2
+	import java.io.*;
+
+	import java.util.*;
+	
+
+	public class prime {
+		
+	    public static void main(String[] args) {
+	    	
+	    	NonGeneric ng=new NonGeneric(true);
+	    	ng.showType();
+	    	    	
+	    }
+	}
+	  class NonGeneric
+	  {
+		  Object obj;
+		  NonGeneric(Object x)
+		  {
+			  obj=x;
+		  }
+		  Object getObject()
+		  {
+			  return obj;
+		  }
+		  void showType()
+		  {
+			  System.out.println("Type "+obj.getClass().getName());
+		  }
+	  }
+	
+
+		
+			
+	
+
