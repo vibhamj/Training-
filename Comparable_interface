@@ -1,0 +1,53 @@
+//Comparable interface
+
+prime.java:
+package training1;
+
+
+	import java.io.*;
+
+	import java.util.*;
+	
+
+	public class prime {
+		
+	    public static void main(String[] args) {
+	    	Student s1=new Student(1,"vibha");
+	    	Student s2=new Student(1,"vibha");
+	    	if(s1.compareTo(s2)==0)
+	    	{
+	    		System.out.println("same student");
+	    	}
+	    	System.out.println(s1.toString());
+	    	
+	  }
+	    
+	}
+	
+Student.java:
+package training1;
+
+public class Student implements Comparable{
+	int regno;
+	String name;
+	Student(int regno,String name)
+	{
+		this.regno=regno;
+		this.name=name;
+	}
+	public int compareTo(Object o)
+	{
+		return this.name.compareTo(((Student)o).name);
+	}
+	public String toString()
+	{
+		return regno+" "+name;
+	}
+
+}
+
+
+		
+			
+	
+
