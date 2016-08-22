@@ -1,0 +1,26 @@
+cut the sticks
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int numberOfSticks=0;
+        int min=0;
+       
+        ArrayList sticks=new ArrayList;
+        Scanner scan=new Scanner(System.in);
+        numberOfSticks=scan.nextInt();
+        for(int i=0;i<numberOfSticks;i++)
+            {
+            sticks.add(scan.nextInt());
+        }
+        min=collections.min(sticks);
+        System.out.println(numberOfSticks);
+       while(sticks.size()!=0)
+           {
+           System.out.println()
+       }
+    }
+}
