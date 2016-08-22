@@ -1,0 +1,40 @@
+generic	
+package training1;
+
+
+import java.io.*;
+
+	import java.util.*;
+	
+
+	public class prime {
+		
+	    public static void main(String[] args) {
+	    	Stack <Integer> s=new Stack<>();
+	    	NonGeneric ng=new NonGeneric(true);
+	    	ng.showType();
+	    	    	
+	    }
+	}
+	  class NonGeneric<T>
+	  {
+		  T obj;
+		  NonGeneric(T x)
+		  {
+			  obj=x;
+		  }
+		  Object getObject()
+		  {
+			  return obj;
+		  }
+		  void showType()
+		  {
+			  System.out.println("Type "+obj.getClass().getName());
+		  }
+	  }
+	
+
+		
+			
+	
+
